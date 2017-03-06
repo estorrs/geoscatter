@@ -2,7 +2,7 @@
 from geoplot.GeoScatter import GeoScatter
 from geoplot.GeoPoint import GeoPoint
 
-googleMapsApiKey = "AIzaSyAYiqF5K_nJegdPsYOuq80ufWk_x2ffGCc"
+googleMapsApiKey = "################"
 
 # 54.599559, -5.927397
 cLat = 54.599559
