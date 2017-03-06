@@ -1,1 +1,3 @@
-geoplot
+geoplot: a python API for populating maps with points and heatmaps. 
+
+Example usage upcoming....
