@@ -63,9 +63,9 @@ gs = GeoScatter(googleMapsApiKey, center, zoom=3, imgSize=600, mapLabels=False)
 
 
 
-Before we add some points to our map, I'd like to take a moment to say the data I'll be using in these examples.  The datsets are the starting location of all US tornado tracks since 1950 (National Weather Service) and all *"significant"* global earthquakes since 2500 B.C. (USGS). 
+Before we add some points to our map, I'd like to take a moment to talk about the data I'll be using in these examples.  The datsets are the starting location of all US tornado tracks since 1950 (National Weather Service) and all *"significant"* global earthquakes since 2500 B.C. (USGS). 
 
-There are multiple ways we can add points to our map.  First we can add points by file.  The file must have two fields.  This first field is the point latitude and the second is the longitude.  The fields can be separated by either a comma or tab.  So both latitude,longitude and latitude	longitude are acceptable. 
+There are multiple ways we can add points to our map.  First we can add points by file.  The file must have two fields.  This first field is the point latitude and the second is the longitude.  The fields can be separated by either a comma or tab.  So both latitude,longitude and latitude\tlongitude are acceptable. 
 
 Lets plot all tornadoes in the United States since 1950. 
 ```python
@@ -84,7 +84,7 @@ gs.showMap()
 
 What if we wan't points in the same dataset to have different sizes?  We can do that.  
 
-Another way we can add points by file is to use a file that has three fields.  The first two fields are the points latitude and longitude.  The third field is the point size.  The fields can be separated by commas or tabs. 
+Another way we can add points by file by using a file with three fields.  The first two fields are the points latitude and longitude.  The third field is the point size.  The fields can be separated by commas or tabs. 
 
 Here we plot the same tornadoes, but the size of the point corresponds to the number of deaths caused by the tornado.  
 ```python
@@ -94,7 +94,7 @@ gs.showMap()
 ```
 ![missouri torandoes triangles](/images/tornadoes/missouri_tornadoes_deaths.png)
 
-When we add points this way, the size parameter becomes a scalar.  So for instance, if we want to make the points 3X larger we can. 
+When we add points this way, the size parameter becomes a scalar.  So for instance, if we want to make the points 3X larger. 
 
 ```python 
 gs = GeoScatter(googleMapsApiKey, center, zoom=7, imgSize=600, mapLabels=False)
@@ -150,7 +150,7 @@ gs.showMap()
 ```
 ![heatmap](/images/earthquakes/all_earthquakes_heatmap.png)
 
-The heatmap bandwidth can be adjusted. Bandwidth controls the *"smoothness"* of the heatmap.  A larger bandwidth will result in a more homogenous heatmap.  
+The heatmap bandwidth can be adjusted. Bandwidth controls the *"smoothness"* of the heatmap.  A larger bandwidth will result in a smoother heatmap.  
 
 Here we zoom in on California and use a bandwidth of 10.0. 
 
@@ -188,9 +188,9 @@ gs.showMap()
 We can also display only the heatmap by setting point size to 0
 
 ```python
-gs = GeoScatter(googleMapsApiKey, center, zoom = 5, imgSize = 600, mapLabels=False)
-gs.addPoints("../example_data/earthquake_locations.csv", s =0, alpha = 1.0, c = '#FFFF00', marker='s')
-gs.addHeatmap(colorscheme = "coolwarm", bw=25.0, alpha=.4)
+gs = GeoScatter(googleMapsApiKey, center, zoom=5, imgSize=600, mapLabels=False)
+gs.addPoints("../example_data/earthquake_locations.csv", s=0, alpha=1.0, c='#FFFF00', marker='s')
+gs.addHeatmap(colorscheme="coolwarm", bw=25.0, alpha=.4)
 gs.showMap()
 ```
 ![nopoints](/images/earthquakes/california_earthquakes_heatmap_nopoints.png)
