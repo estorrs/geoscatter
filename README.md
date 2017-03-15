@@ -13,3 +13,6 @@ center = GeoPoint(cLat, cLon)
 gs = GeoScatter(googleMapsApiKey, center, zoom = 7, imgSize = 600, mapLabels=False)
 gs.addPoints("../example_data/tornado_locations.csv", s =2, alpha = .4, c = 'r', marker='o')
 ```
+
+![GitHub Logo](/images/logo.png)
+Format: ![Alt Text](url)
