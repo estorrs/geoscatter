@@ -126,4 +126,14 @@ gs.addPoints("../example_data/tornado_locations.csv", s=5, alpha = 1.0, c = 'r',
 ```
 ![GitHub Logo](/images/earthquakes/california_earthquakes_tornadoes.png)
 
+And we can also do separate heatmaps. 
+
+```python
+gs = GeoScatter(googleMapsApiKey, center, zoom = 6, imgSize = 600, mapLabels=False)
+gs.addPoints("../example_data/earthquake_locations.csv", s =5, alpha = 1.0, c = 'b', marker='s')
+gs.addHeatmap(colorscheme = "Blues", bw=30.0, alpha=.4)
+gs.addPoints("../example_data/tornado_locations.csv", s=5, alpha = 1.0, c = 'r', marker='v')
+gs.addHeatmap(colorscheme = "Reds", bw=30.0, alpha=.4)
+```
+![GitHub Logo](/images/earthquakes/california_earthquakes_tornadoes_heatmap.png)
 
