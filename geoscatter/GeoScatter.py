@@ -22,7 +22,15 @@ class GeoScatter:
     def __init__(self, apiKey, cPoint, zoom=7, imgSize=256, mapLabels=False):
         if (not isinstance(cPoint, GeoPoint)): 
             raise ValueError("cPoint must be a GeoPoint")
-        self.center = cPoint
+        
+        '''
+        If the map is of the whole globe then we want the center to be 0,0
+        '''
+        if (zoom == 1): 
+            self.center = GeoPoint(0.0,0.0)
+        else: 
+            self.center = cPoint
+            
         self.zoom = zoom
 
         '''
@@ -46,7 +54,7 @@ class GeoScatter:
         points show up in the correct location
         '''
         self._widthCorrection = 1.0
-        self._heightCorrection = 1.0 
+        self._heightCorrection = 1.0001 
         
         '''
         to keep track of the current set of points GeoScatter is operating on
