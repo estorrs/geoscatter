@@ -61,4 +61,17 @@ gs.addPoints("../example_data/tornadoes_deaths.csv", s =3, alpha = .4, c = 'r', 
 ```
 ![GitHub Logo](/images/tornadoes/missouri_tornadoes_deaths_s3.png)
 
+### Adding heatmaps
+
+We can also add heatmaps to our map.  First we create a map of all *significant* earthquakes in the past 4500 years.  
+
+```python
+cLat = 0
+cLon = 0
+center = GeoPoint(cLat, cLon)
+# gs = GeoScatter(googleMapsApiKey, center, zoom = 1, imgSize = 600, mapLabels=False)
+# gs.addPoints("../example_data/earthquake_locations.csv", s =5, alpha = 1.0, c = '#FFFF00', marker='s')
+```
+![GitHub Logo](/images/tornadoes/all_earthquakes.png)
+
 
