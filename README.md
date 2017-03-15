@@ -112,5 +112,18 @@ gs.addHeatmap(colorscheme = "Reds", bw=25.0, alpha=.4)
 ```
 ![GitHub Logo](/images/earthquakes/california_earthquake_heatmap_reds.png)
 
+### Adding multiple datasets
+
+Multiple sets of points can also be plotted.  Here we plot both earthquakes (blue for better contrast) and tornadoes.  
+
+```python 
+cLat = 36.157467
+cLon = -120.862654
+center = GeoPoint(cLat, cLon)
+gs = GeoScatter(googleMapsApiKey, center, zoom = 6, imgSize = 600, mapLabels=False)
+gs.addPoints("../example_data/earthquake_locations.csv", s =5, alpha = 1.0, c = 'b', marker='s')
+gs.addPoints("../example_data/tornado_locations.csv", s=5, alpha = 1.0, c = 'r', marker='v')
+```
+![GitHub Logo](/images/earthquakes/california_earthquakes_tornadoes.png)
 
 
