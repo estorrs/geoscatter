@@ -20,6 +20,11 @@
 1. [Adding Heatmaps](#adding-heatmaps)
 1. [Adding Multiple Datasets](#adding-multiple-datasets)
 
+
+More in depth documentation [here](https://github.com/estorrs/geoscatter/wiki)
+
+
+
 #### Setup
 
 First import the GeoScatter and GeoPoint classes from geoscatter
