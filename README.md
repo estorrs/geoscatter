@@ -35,12 +35,19 @@ gs.addPoints("../example_data/tornado_locations.csv", s =.5, alpha = .4, c = 'r'
 ```
 ![GitHub Logo](/images/tornadoes/all_tornadoes.png)
 
-We can also change the point shape, size, color, and transparency.  Here we plot the tornadoes in missouri as 10 pixel wide blue triangles with no transparency.  
+We can also change the point shape, size, color, and transparency.  It's messy but here we plot the tornadoes in missouri as 10 pixel wide blue triangles with no transparency.  
 ```python
 gs = GeoScatter(googleMapsApiKey, center, zoom=7, imgSize = 600, mapLabels=False)
 gs.addPoints("../example_data/tornado_locations.csv", s =10, alpha = 1.0, c = 'b', marker='v')
 ```
 ![GitHub Logo](/images/tornadoes/missouri_tornadoes_notransparency.png)
 
+What if we wan't to points in the same dataset to be different sizes?  We can do that.  Another way we can add points by file is to use a file that has three fields.  The first two fields are the points latitude and the points longitude.  The third field is the point size.  The fields can be separated by commas or tabs. 
 
+Here we plot the same tornadoes, but the size of the point corresponds to the number of deaths the tornado caused. 
+```python
+gs = GeoScatter(googleMapsApiKey, center, zoom = 7, imgSize = 600, mapLabels=False)
+gs.addPoints("../example_data/tornadoes_deaths.csv", s =1, alpha = .4, c = 'r', marker='o')
+```
+![GitHub Logo](/images/tornadoes/missouri_tornadoes_deaths.png)
 
