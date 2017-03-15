@@ -215,7 +215,5 @@ gs.showMap()
 
 ### License
 
-Available under the MIT license
-
-[here](License.txt)
+Available under the MIT license [here](License.txt)
 
