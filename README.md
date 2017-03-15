@@ -166,6 +166,16 @@ gs.showMap()
 ```
 ![GitHub Logo](/images/earthquakes/california_earthquake_heatmap_reds.png)
 
+We can also display only the heatmap by setting point size to 0
+
+```python
+gs = GeoScatter(googleMapsApiKey, center, zoom = 5, imgSize = 600, mapLabels=False)
+gs.addPoints("../example_data/earthquake_locations.csv", s =0, alpha = 1.0, c = '#FFFF00', marker='s')
+gs.addHeatmap(colorscheme = "coolwarm", bw=25.0, alpha=.4)
+gs.showMap()
+```
+![GitHub Logo](/images/earthquakes/california_earthquake_heatmap_nopoints.png)
+
 #### Adding Multiple Datasets
 
 geoscatter allows for visualization of multiple sets of points.  Here we plot both earthquakes (blue squares) and tornadoes(red triangles).  
