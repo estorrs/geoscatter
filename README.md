@@ -2,6 +2,8 @@
 
 **A python API for adding points and heatmaps to a map.**
 
+***
+
 ## Table of Contents
 1. [Usage](#usage)
 	1. [Setup](#setup)
@@ -10,6 +12,7 @@
 	1. [Adding Multiple Datasets](#adding-multiple-datasets)
 1. [License](#license)
 	
+***
 
 ### Usage
 1. [Setup](#setup)
@@ -203,7 +206,7 @@ gs.showMap()
 ```
 ![mult heatmapts](/images/earthquakes/california_earthquakes_tornadoes_heatmap.png)
 
-
+***
 
 ### License
 
