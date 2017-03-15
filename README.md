@@ -3,7 +3,7 @@
 **A python API for adding points and heatmaps to a map.**
 
 ## Usage
-[create an anchor](#anchors-in-markdown)
+[create an anchor](#Adding-points)
 
 First import the GeoScatter and GeoPoint classes from geoscatter
 
