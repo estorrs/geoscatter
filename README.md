@@ -72,6 +72,6 @@ center = GeoPoint(cLat, cLon)
 # gs = GeoScatter(googleMapsApiKey, center, zoom = 1, imgSize = 600, mapLabels=False)
 # gs.addPoints("../example_data/earthquake_locations.csv", s =5, alpha = 1.0, c = '#FFFF00', marker='s')
 ```
-![GitHub Logo](/images/tornadoes/all_earthquakes.png)
+![GitHub Logo](/images/earthquakes/all_earthquakes.png)
 
 
