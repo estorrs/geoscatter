@@ -14,5 +14,6 @@ gs = GeoScatter(googleMapsApiKey, center, zoom = 7, imgSize = 600, mapLabels=Fal
 gs.addPoints("../example_data/tornado_locations.csv", s =2, alpha = .4, c = 'r', marker='o')
 ```
 
-![GitHub Logo](/images/logo.png)
+![GitHub Logo](/images/tornadoes/all_tornadoes.png)
+![GitHub Logo](https://github.com/estorrs/geoplot/blob/master/images/tornadoes/all_tornadoes.png)
 Format: ![Alt Text](url)
