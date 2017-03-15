@@ -1,8 +1,8 @@
-##geoscatter
+### geoscatter
 
-**A python API for adding points and heatmaps to a map. **
+**A python API for adding points and heatmaps to a map.**
 
-#Usage
+## Usage
 
 First we import the GeoScatter and GeoPoint classes from geoscatter
 
