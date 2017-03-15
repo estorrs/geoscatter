@@ -53,7 +53,7 @@ Lets plot all tornadoes in the United States since 1950.
 gs.addPoints("../example_data/tornado_locations.csv", s=.5, alpha=.4, c='r', marker='o')
 gs.showMap()
 ```
-![GitHub Logo](/images/tornadoes/all_tornadoes.png)
+![all tornadoes](/images/tornadoes/all_tornadoes.png)
 
 We can also change point shape, size, color, and transparency.  It's messy but here we plot the tornadoes in Missouri as 10 pixel wide blue triangles with no transparency.  For more about [marker](http://matplotlib.org/api/markers_api.html) and [color](https://matplotlib.org/api/colors_api.html) see matplotlib's documentation.
 ```python
@@ -61,7 +61,7 @@ gs = GeoScatter(googleMapsApiKey, center, zoom=7, imgSize = 600, mapLabels=False
 gs.addPoints("../example_data/tornado_locations.csv", s=10, alpha=1.0, c='b', marker='v')
 gs.showMap()
 ```
-![GitHub Logo](/images/tornadoes/missouri_tornadoes_notransparency.png)
+![missouri tornadoes](/images/tornadoes/missouri_tornadoes_notransparency.png)
 
 What if we wan't points in the same dataset to have different sizes?  We can do that.  
 
@@ -73,7 +73,7 @@ gs = GeoScatter(googleMapsApiKey, center, zoom=7, imgSize=600, mapLabels=False)
 gs.addPoints("../example_data/tornadoes_deaths.csv", s=1, alpha=.4, c='r', marker='o')
 gs.showMap()
 ```
-![GitHub Logo](/images/tornadoes/missouri_tornadoes_deaths.png)
+![missouri torandoes triangles](/images/tornadoes/missouri_tornadoes_deaths.png)
 
 When we add points this way, the size parameter becomes a scalar.  So for instance, if we want to make the points 3X larger we can. 
 
@@ -82,7 +82,7 @@ gs = GeoScatter(googleMapsApiKey, center, zoom=7, imgSize=600, mapLabels=False)
 gs.addPoints("../example_data/tornadoes_deaths.csv", s=3, alpha=.4, c='r', marker='o')
 gs.showMap()
 ```
-![GitHub Logo](/images/tornadoes/missouri_tornadoes_deaths_s3.png)
+![tornado deaths](/images/tornadoes/missouri_tornadoes_deaths_s3.png)
 
 Lastly, we can manually add the points ourselves by creating a list of GeoPoints. GeoPoints have three attributes: latitude, longitude, and magnitude.  
 
@@ -100,7 +100,7 @@ gs = GeoScatter(googleMapsApiKey, center, zoom=7, imgSize=600, mapLabels=True)
 gs.addPoints(pts, s=1, alpha=.4, c='r', marker='o')
 gs.showMap()
 ```
-![GitHub Logo](/images/tornadoes/missouri_tornadoes_deaths.png)
+![tornado manual](/images/tornadoes/missouri_tornadoes_deaths.png)
 
 
 #### Adding Heatmaps
@@ -117,7 +117,7 @@ gs = GeoScatter(googleMapsApiKey, center, zoom=1, imgSize=600, mapLabels=False)
 gs.addPoints("../example_data/earthquake_locations.csv", s=5, alpha=1.0, c='#FFFF00', marker='s')
 gs.showMap()
 ```
-![GitHub Logo](/images/earthquakes/all_earthquakes.png)
+![earthquakes](/images/earthquakes/all_earthquakes.png)
 
 Now we add a heatmap.  A brief warning that when the quantity of points starts to get into the thousands you may have to wait a minute or two for the heatmap to generate.  And even longer if you are using more points than that. 
 ```python
@@ -129,7 +129,7 @@ gs.addPoints("../example_data/earthquake_locations.csv", s=5, alpha=1.0, c='#FFF
 gs.addHeatmap(colorscheme="coolwarm", bw=25.0, alpha=.4)
 gs.showMap()
 ```
-![GitHub Logo](/images/earthquakes/all_earthquakes_heatmap.png)
+![heatmap](/images/earthquakes/all_earthquakes_heatmap.png)
 
 The heatmap bandwidth can be adjusted. Bandwidth controls the *"smoothness"* of the heatmap.  A larger bandwidth will result in a more homogenous heatmap.  
 
@@ -144,7 +144,7 @@ gs.addPoints("../example_data/earthquake_locations.csv", s=5, alpha=1.0, c='#FFF
 gs.addHeatmap(colorscheme="coolwarm", bw=10.0, alpha=.4)
 gs.showMap()
 ```
-![GitHub Logo](/images/earthquakes/california_earthquakes_heatmap_bw10.png)
+![bw 10](/images/earthquakes/california_earthquakes_heatmap_bw10.png)
 
 And a bandwidth of 100.0. 
 
@@ -154,7 +154,7 @@ gs.addPoints("../example_data/earthquake_locations.csv", s=5, alpha=1.0, c='#FFF
 gs.addHeatmap(colorscheme="coolwarm", bw=100.0, alpha=.4)
 gs.showMap()
 ```
-![GitHub Logo](/images/earthquakes/california_earthquakes_heatmap_bw100.png)
+![bw 100](/images/earthquakes/california_earthquakes_heatmap_bw100.png)
 
 We can also alter the colorscheme. For more on [colorschemes](http://matplotlib.org/examples/color/colormaps_reference.html) visit matplotlib's documentation. 
 
@@ -164,7 +164,7 @@ gs.addPoints("../example_data/earthquake_locations.csv", s=5, alpha=1.0, c='#FFF
 gs.addHeatmap(colorscheme="Reds", bw=25.0, alpha=.4)
 gs.showMap()
 ```
-![GitHub Logo](/images/earthquakes/california_earthquake_heatmap_reds.png)
+![reds](/images/earthquakes/california_earthquake_heatmap_reds.png)
 
 We can also display only the heatmap by setting point size to 0
 
@@ -174,7 +174,7 @@ gs.addPoints("../example_data/earthquake_locations.csv", s =0, alpha = 1.0, c = 
 gs.addHeatmap(colorscheme = "coolwarm", bw=25.0, alpha=.4)
 gs.showMap()
 ```
-![GitHub Logo](/images/earthquakes/california_earthquake_heatmap_nopoints.png)
+![nopoints](/images/earthquakes/california_earthquakes_heatmap_nopoints.png)
 
 #### Adding Multiple Datasets
 
@@ -189,7 +189,7 @@ gs.addPoints("../example_data/earthquake_locations.csv", s=5, alpha=1.0, c='b', 
 gs.addPoints("../example_data/tornado_locations.csv", s=5, alpha=1.0, c='r', marker='v')
 gs.showMap()
 ```
-![GitHub Logo](/images/earthquakes/california_earthquakes_tornadoes.png)
+![mult datasets](/images/earthquakes/california_earthquakes_tornadoes.png)
 
 We can also do separate heatmaps. 
 
@@ -201,7 +201,7 @@ gs.addPoints("../example_data/tornado_locations.csv", s=5, alpha=1.0, c='r', mar
 gs.addHeatmap(colorscheme="Reds", bw=30.0, alpha=.4)
 gs.showMap()
 ```
-![GitHub Logo](/images/earthquakes/california_earthquakes_tornadoes_heatmap.png)
+![mult heatmapts](/images/earthquakes/california_earthquakes_tornadoes_heatmap.png)
 
 
 
