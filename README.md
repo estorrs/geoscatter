@@ -5,6 +5,7 @@
 ***
 
 ## Table of Contents
+1. [Installation](#installation)
 1. [Usage](#usage)
 	1. [Setup](#setup)
 	1. [Adding Points](#adding-points)
@@ -12,6 +13,16 @@
 	1. [Adding Multiple Datasets](#adding-multiple-datasets)
 1. [License](#license)
 	
+***
+
+### Installation
+
+You will need [pip](https://packaging.python.org/installing/) on your machine. 
+
+Then at the command line 
+```bash
+pip install geoscatter
+```
 ***
 
 ### Usage
@@ -30,7 +41,6 @@
 First import the GeoScatter and GeoPoint classes from geoscatter
 
 ```python
-import geoscatter
 from geoscatter import GeoScatter
 from geoscatter import GeoPoint
 ```
