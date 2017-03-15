@@ -110,7 +110,7 @@ gs = GeoScatter(googleMapsApiKey, center, zoom = 5, imgSize = 600, mapLabels=Fal
 gs.addPoints("../example_data/earthquake_locations.csv", s =5, alpha = 1.0, c = '#FFFF00', marker='s')
 gs.addHeatmap(colorscheme = "Reds", bw=25.0, alpha=.4)
 ```
-![GitHub Logo](/images/earthquakes/california_earthquakes_heatmap_reds.png)
+![GitHub Logo](/images/earthquakes/california_earthquake_heatmap_reds.png)
 
 
 
