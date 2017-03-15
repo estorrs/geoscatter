@@ -94,7 +94,7 @@ gs.showMap()
 ![GitHub Logo](/images/tornadoes/missouri_tornadoes_deaths.png)
 
 
-### Adding heatmaps
+### Adding Heatmaps
 
 geoscatter also supports heatmaps.  
 
@@ -157,7 +157,7 @@ gs.showMap()
 ```
 ![GitHub Logo](/images/earthquakes/california_earthquake_heatmap_reds.png)
 
-### Adding multiple datasets
+### Adding Multiple Datasets
 
 geoscatter allows for visualization of multiple sets of points.  Here we plot both earthquakes (blue squares) and tornadoes(red triangles).  
 
