@@ -215,7 +215,5 @@ gs.showMap()
 
 ### License
 
-GNU GPLv3
-
-[here](License.txt)
+Available under the MIT license [here](License.txt)
 

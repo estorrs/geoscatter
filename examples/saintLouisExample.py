@@ -3,16 +3,13 @@ from geoscatter.GeoScatter import GeoPoint
 
 googleMapsApiKey = "AIzaSyAYiqF5K_nJegdPsYOuq80ufWk_x2ffGCc"
 
-cLat = 36.157467
-cLon = -120.862654
+cLat = 39.140328
+cLon = -120.034881
 center = GeoPoint(cLat, cLon)
-gs = GeoScatter(googleMapsApiKey, center, zoom=6, imgSize=600, mapLabels=False)
-gs.addPoints("../example_data/earthquake_locations.csv", s=5, alpha=1.0, c='b', marker='s')
-gs.addHeatmap(colorscheme="Blues", bw=30.0, alpha=.4)
-gs.addPoints("../example_data/tornado_locations.csv", s=5, alpha=1.0, c='r', marker='v')
-gs.addHeatmap(colorscheme="Reds", bw=30.0, alpha=.4)
+gs = GeoScatter(googleMapsApiKey, center, zoom = 5, imgSize = 600, mapLabels=False)
+gs.addPoints("../example_data/earthquake_locations.csv", s =0, alpha = 1.0, c = '#FFFF00', marker='s')
+gs.addHeatmap(colorscheme = "coolwarm", bw=25.0, alpha=.4)
 gs.showMap()
-
 
 # 
 # # 38.536178, -92.302498
