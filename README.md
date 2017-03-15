@@ -61,6 +61,24 @@ gs.addPoints("../example_data/tornadoes_deaths.csv", s =3, alpha = .4, c = 'r', 
 ```
 ![GitHub Logo](/images/tornadoes/missouri_tornadoes_deaths_s3.png)
 
+Lastly, we can manually add the points ourselves by creating a list of GeoPoints. GeoPoints have three attributes: latitude, longitude, and magnitude.  
+
+```python
+pts = []
+inputFile = file("../example_data/tornadoes_deaths.csv", "r")
+for line in inputFile: 
+    line = line.strip()
+    pieces = line.split(",")
+    newPoint = GeoPoint(float(pieces[0]), float(pieces[1]))
+    newPoint.magnitude = float(pieces[2])
+    pts.append(newPoint)
+    
+gs = GeoScatter(googleMapsApiKey, center, zoom = 7, imgSize = 600, mapLabels=True)
+gs.addPoints(pts, s =1, alpha = .4, c = 'r', marker='o')
+```
+![GitHub Logo](/images/tornadoes/missouri_tornadoes_deaths.png)
+
+
 ### Adding heatmaps
 
 We can also add heatmaps to our map.  First we create a map of all *"significant"* earthquakes in the past 4500 years.  
@@ -114,7 +132,7 @@ gs.addHeatmap(colorscheme = "Reds", bw=25.0, alpha=.4)
 
 ### Adding multiple datasets
 
-Multiple sets of points can also be plotted.  Here we plot both earthquakes (blue for better contrast) and tornadoes.  
+geoscatter allows multiple sets of points to be plotted.  Here we plot both earthquakes (blue squares) and tornadoes(red triangles).  
 
 ```python 
 cLat = 36.157467
