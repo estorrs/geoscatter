@@ -25,7 +25,7 @@ center = GeoPoint(cLat, cLon)
 gs = GeoScatter(googleMapsApiKey, center, zoom = 3, imgSize = 600, mapLabels=False)
 ```
 
-Before we add some points to our map, I'd like to take a moment to say the dataset I'll be using in these examples are all US tornadoes since 1950 (National Weather Service) and all significant global earthquakes since 2500 B.C. (USGS). 
+Before we add some points to our map, I'd like to take a moment to say the dataset I'll be using in these examples are the starting location of all US tornado tracks since 1950 (National Weather Service) and all significant global earthquakes since 2500 B.C. (USGS). 
 
 There are multiple ways we can add points to our map.  First we can add points by file.  The file format must have two fields.  This first field is the point latitude and the second is the longitude.  The fields can be separated by either a comma or tab.  So both latitude,longitude and latitude	longitude are acceptable. 
 
@@ -50,4 +50,13 @@ gs = GeoScatter(googleMapsApiKey, center, zoom = 7, imgSize = 600, mapLabels=Fal
 gs.addPoints("../example_data/tornadoes_deaths.csv", s =1, alpha = .4, c = 'r', marker='o')
 ```
 ![GitHub Logo](/images/tornadoes/missouri_tornadoes_deaths.png)
+
+When we add points this way, the size parameter becomes a scalar.  So for instance, if we want to make the points 3X larger, we can do that. 
+
+```python 
+gs = GeoScatter(googleMapsApiKey, center, zoom = 7, imgSize = 600, mapLabels=False)
+gs.addPoints("../example_data/tornadoes_deaths.csv", s =3, alpha = .4, c = 'r', marker='o')
+```
+![GitHub Logo](/images/tornadoes/missouri_tornadoes_deaths_s3.png)
+
 
