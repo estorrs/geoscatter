@@ -11,12 +11,12 @@ from geoscatter.GeoScatter import GeoScatter
 from geoscatter.GeoScatter import GeoPoint
 ```
 
-To use geoscatter you will need a Google Static Maps API key.  It's quick and free, just go [here](https://developers.google.com/maps/documentation/static-maps/) and click *Get A Key* in the top right corner of the page. 
+To use geoscatter, you will need a Google Static Maps API key.  It's quick and free, just go [here](https://developers.google.com/maps/documentation/static-maps/) and click *Get A Key* in the top right corner of the page. 
 ```python
 googleMapsApiKey = "INSERT YOUR API KEY HERE!!"
 ```
 
-To begin, we define our map.  To do this we specify the center of the map by creating a GeoPoint containing the latitude and longitude of the center coordinate (Columbia, Mo in this case).  We can also specify a zoom level between 1 and 20 and the size of the map in pixels.  A quick note on map size, if a size below 150 or above 600, good results can't be guaranteed. Additionally you can choose to get a map with or without labels.   
+To begin, we define our map.  To do this we specify the center of the map by creating a GeoPoint containing the latitude and longitude of the center coordinate (Columbia, Mo in this case).  We can also specify a zoom level between 1 and 20 and the size of the map in pixels.  A quick note on map size, if a size below 150 or above 600, good results can't be guaranteed. Additionally you have the ability to choose to get a map with or without labels.   
 ```python
 cLat = 38.536178
 cLon = -92.302498
@@ -37,7 +37,7 @@ gs.addPoints("../example_data/tornado_locations.csv", s =.5, alpha = .4, c = 'r'
 ```
 ![GitHub Logo](/images/tornadoes/all_tornadoes.png)
 
-We can also change the point shape, size, color, and transparency.  It's messy but here we plot the tornadoes in missouri as 10 pixel wide blue triangles with no transparency.  
+We can also change the point shape, size, color, and transparency.  It's messy but here we plot the tornadoes in Missouri as 10 pixel wide blue triangles with no transparency.  For more about [marker](http://matplotlib.org/api/markers_api.html) and [color](https://matplotlib.org/api/colors_api.html) see matplotlib's documentation.
 ```python
 gs = GeoScatter(googleMapsApiKey, center, zoom=7, imgSize = 600, mapLabels=False)
 gs.addPoints("../example_data/tornado_locations.csv", s =10, alpha = 1.0, c = 'b', marker='v')
@@ -69,8 +69,8 @@ We can also add heatmaps to our map.  First we create a map of all *"significant
 cLat = 0
 cLon = 0
 center = GeoPoint(cLat, cLon)
-# gs = GeoScatter(googleMapsApiKey, center, zoom = 1, imgSize = 600, mapLabels=False)
-# gs.addPoints("../example_data/earthquake_locations.csv", s =5, alpha = 1.0, c = '#FFFF00', marker='s')
+gs = GeoScatter(googleMapsApiKey, center, zoom = 1, imgSize = 600, mapLabels=False)
+gs.addPoints("../example_data/earthquake_locations.csv", s =5, alpha = 1.0, c = '#FFFF00', marker='s')
 ```
 ![GitHub Logo](/images/earthquakes/all_earthquakes.png)
 
@@ -103,7 +103,7 @@ gs.addHeatmap(colorscheme = "coolwarm", bw=100.0, alpha=.4)
 ```
 ![GitHub Logo](/images/earthquakes/california_earthquakes_heatmap_bw100.png)
 
-We can also alter the colorscheme. 
+We can also alter the colorscheme. For more on [colorschemes](http://matplotlib.org/examples/color/colormaps_reference.html) visit matplotlib's documentation. 
 
 ```python
 gs = GeoScatter(googleMapsApiKey, center, zoom = 5, imgSize = 600, mapLabels=False)
@@ -126,7 +126,7 @@ gs.addPoints("../example_data/tornado_locations.csv", s=5, alpha = 1.0, c = 'r',
 ```
 ![GitHub Logo](/images/earthquakes/california_earthquakes_tornadoes.png)
 
-And we can also do separate heatmaps. 
+We can also do separate heatmaps. 
 
 ```python
 gs = GeoScatter(googleMapsApiKey, center, zoom = 6, imgSize = 600, mapLabels=False)
