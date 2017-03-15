@@ -34,6 +34,7 @@ There are multiple ways we can add points to our map.  First we can add points b
 Lets plot all tornadoes in the United States since 1950. 
 ```python
 gs.addPoints("../example_data/tornado_locations.csv", s=.5, alpha=.4, c='r', marker='o')
+gs.showMap()
 ```
 ![GitHub Logo](/images/tornadoes/all_tornadoes.png)
 
@@ -41,6 +42,7 @@ We can also change point shape, size, color, and transparency.  It's messy but h
 ```python
 gs = GeoScatter(googleMapsApiKey, center, zoom=7, imgSize = 600, mapLabels=False)
 gs.addPoints("../example_data/tornado_locations.csv", s=10, alpha=1.0, c='b', marker='v')
+gs.showMap()
 ```
 ![GitHub Logo](/images/tornadoes/missouri_tornadoes_notransparency.png)
 
@@ -52,6 +54,7 @@ Here we plot the same tornadoes, but the size of the point corresponds to the nu
 ```python
 gs = GeoScatter(googleMapsApiKey, center, zoom=7, imgSize=600, mapLabels=False)
 gs.addPoints("../example_data/tornadoes_deaths.csv", s=1, alpha=.4, c='r', marker='o')
+gs.showMap()
 ```
 ![GitHub Logo](/images/tornadoes/missouri_tornadoes_deaths.png)
 
@@ -60,6 +63,7 @@ When we add points this way, the size parameter becomes a scalar.  So for instan
 ```python 
 gs = GeoScatter(googleMapsApiKey, center, zoom=7, imgSize=600, mapLabels=False)
 gs.addPoints("../example_data/tornadoes_deaths.csv", s=3, alpha=.4, c='r', marker='o')
+gs.showMap()
 ```
 ![GitHub Logo](/images/tornadoes/missouri_tornadoes_deaths_s3.png)
 
@@ -77,6 +81,7 @@ for line in inputFile:
     
 gs = GeoScatter(googleMapsApiKey, center, zoom=7, imgSize=600, mapLabels=True)
 gs.addPoints(pts, s=1, alpha=.4, c='r', marker='o')
+gs.showMap()
 ```
 ![GitHub Logo](/images/tornadoes/missouri_tornadoes_deaths.png)
 
@@ -93,12 +98,19 @@ cLon = 0
 center = GeoPoint(cLat, cLon)
 gs = GeoScatter(googleMapsApiKey, center, zoom=1, imgSize=600, mapLabels=False)
 gs.addPoints("../example_data/earthquake_locations.csv", s=5, alpha=1.0, c='#FFFF00', marker='s')
+gs.showMap()
 ```
 ![GitHub Logo](/images/earthquakes/all_earthquakes.png)
 
-Now we add a heatmap.  A brief warning that when the quantity of points starts to get into the thousands you may have to wait a few seconds for the heatmap to generate.  And even longer if you are using more points than that. 
+Now we add a heatmap.  A brief warning that when the quantity of points starts to get into the thousands you may have to wait a minute or two for the heatmap to generate.  And even longer if you are using more points than that. 
 ```python
+cLat = 0
+cLon = 0
+center = GeoPoint(cLat, cLon)
+gs = GeoScatter(googleMapsApiKey, center, zoom=1, imgSize=600, mapLabels=False)
+gs.addPoints("../example_data/earthquake_locations.csv", s=5, alpha=1.0, c='#FFFF00', marker='s')
 gs.addHeatmap(colorscheme="coolwarm", bw=25.0, alpha=.4)
+gs.showMap()
 ```
 ![GitHub Logo](/images/earthquakes/all_earthquakes_heatmap.png)
 
@@ -113,6 +125,7 @@ center = GeoPoint(cLat, cLon)
 gs = GeoScatter(googleMapsApiKey, center, zoom=5, imgSize=600, mapLabels=False)
 gs.addPoints("../example_data/earthquake_locations.csv", s=5, alpha=1.0, c='#FFFF00', marker='s')
 gs.addHeatmap(colorscheme="coolwarm", bw=10.0, alpha=.4)
+gs.showMap()
 ```
 ![GitHub Logo](/images/earthquakes/california_earthquakes_heatmap_bw10.png)
 
@@ -122,6 +135,7 @@ And a bandwidth of 100.0.
 gs = GeoScatter(googleMapsApiKey, center, zoom=5, imgSize=600, mapLabels=False)
 gs.addPoints("../example_data/earthquake_locations.csv", s=5, alpha=1.0, c='#FFFF00', marker='s')
 gs.addHeatmap(colorscheme="coolwarm", bw=100.0, alpha=.4)
+gs.showMap()
 ```
 ![GitHub Logo](/images/earthquakes/california_earthquakes_heatmap_bw100.png)
 
@@ -131,6 +145,7 @@ We can also alter the colorscheme. For more on [colorschemes](http://matplotlib.
 gs = GeoScatter(googleMapsApiKey, center, zoom=5, imgSize=600, mapLabels=False)
 gs.addPoints("../example_data/earthquake_locations.csv", s=5, alpha=1.0, c='#FFFF00', marker='s')
 gs.addHeatmap(colorscheme="Reds", bw=25.0, alpha=.4)
+gs.showMap()
 ```
 ![GitHub Logo](/images/earthquakes/california_earthquake_heatmap_reds.png)
 
@@ -145,6 +160,7 @@ center = GeoPoint(cLat, cLon)
 gs = GeoScatter(googleMapsApiKey, center, zoom=6, imgSize=600, mapLabels=False)
 gs.addPoints("../example_data/earthquake_locations.csv", s=5, alpha=1.0, c='b', marker='s')
 gs.addPoints("../example_data/tornado_locations.csv", s=5, alpha=1.0, c='r', marker='v')
+gs.showMap()
 ```
 ![GitHub Logo](/images/earthquakes/california_earthquakes_tornadoes.png)
 
@@ -156,6 +172,7 @@ gs.addPoints("../example_data/earthquake_locations.csv", s=5, alpha=1.0, c='b', 
 gs.addHeatmap(colorscheme="Blues", bw=30.0, alpha=.4)
 gs.addPoints("../example_data/tornado_locations.csv", s=5, alpha=1.0, c='r', marker='v')
 gs.addHeatmap(colorscheme="Reds", bw=30.0, alpha=.4)
+gs.showMap()
 ```
 ![GitHub Logo](/images/earthquakes/california_earthquakes_tornadoes_heatmap.png)
 
