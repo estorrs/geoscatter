@@ -63,7 +63,7 @@ gs.addPoints("../example_data/tornadoes_deaths.csv", s =3, alpha = .4, c = 'r', 
 
 ### Adding heatmaps
 
-We can also add heatmaps to our map.  First we create a map of all *significant* earthquakes in the past 4500 years.  
+We can also add heatmaps to our map.  First we create a map of all *"significant"* earthquakes in the past 4500 years.  
 
 ```python
 cLat = 0
@@ -74,4 +74,9 @@ center = GeoPoint(cLat, cLon)
 ```
 ![GitHub Logo](/images/earthquakes/all_earthquakes.png)
 
+Now we add a heatmap.  A brief warning that when the quantity of points starts to get into the thousands you may have to wait a few seconds for the heatmap to generate.  And even longer if you are using more points than that. 
+```python
+gs.addHeatmap(colorscheme = "coolwarm", bw=25.0, alpha=.4)
+```
+![GitHub Logo](/images/earthquakes/all_earthquakes_heatmap.png)
 
