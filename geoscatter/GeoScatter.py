@@ -5,7 +5,6 @@ import mercantile
 import numpy as np
 import os
 import urllib
-from GeoPoint import GeoPoint
 
 from PIL import Image
 from scipy.interpolate import interp1d
@@ -46,8 +45,8 @@ class GeoScatter:
         The Mercator tiles for google maps api and the mercantile api are slightly different, so they need to be adjusted so \
         points show up in the correct location
         '''
-        self._widthCorrection = .996
-        self._heightCorrection = 1.001
+        self._widthCorrection = 1.0
+        self._heightCorrection = 1.0 
         
         '''
         to keep track of the current set of points GeoScatter is operating on
@@ -203,9 +202,9 @@ class GeoScatter:
                 raise ValueError("incorrect file format, must be comma seperated or tab seperated")
             
             if len(pieces) == 2: 
-                pts.append(GeoPoint(float(pieces[1]), float(pieces[0])))
+                pts.append(GeoPoint(float(pieces[0]), float(pieces[1])))
             elif len(pieces) == 3: 
-                gp = GeoPoint(float(pieces[1]), float(pieces[0]))
+                gp = GeoPoint(float(pieces[0]), float(pieces[1]))
                 gp.magnitude = float(pieces[2])
                 pts.append(gp)
             else: 
@@ -213,6 +212,11 @@ class GeoScatter:
         return pts
             
          
-    
+
+class GeoPoint: 
+    def __init__(self, lat, lon):
+        self.longitude = lon
+        self.latitude = lat
+        self.magnitude = 1
     
         
