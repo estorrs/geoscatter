@@ -30,8 +30,9 @@
 First import the GeoScatter and GeoPoint classes from geoscatter
 
 ```python
-from geoscatter.GeoScatter import GeoScatter
-from geoscatter.GeoScatter import GeoPoint
+import geoscatter
+from geoscatter import GeoScatter
+from geoscatter import GeoPoint
 ```
 
 To use geoscatter, you will need a Google Static Maps API key.  It's quick and free!  Just go [here](https://developers.google.com/maps/documentation/static-maps/) and click *Get A Key* in the top right corner of the page. 
