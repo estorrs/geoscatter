@@ -82,7 +82,7 @@ gs.addHeatmap(colorscheme = "coolwarm", bw=25.0, alpha=.4)
 
 The heatmap bandwidth can also be changed. The bandwidth is a parameter that controls the smoothness of the heatmap.  Therefore, a larger bandwidth will result in a more homogenous heatmap.  
 
-Here we zoom in on California and use a bandwidth of 10.0 instead of 25.0. 
+Here we zoom in on California and use a bandwidth of 10.0. 
 
 ```python
 cLat = 39.140328
@@ -93,6 +93,16 @@ gs.addPoints("../example_data/earthquake_locations.csv", s =5, alpha = 1.0, c = 
 gs.addHeatmap(colorscheme = "coolwarm", bw=10.0, alpha=.4)
 ```
 ![GitHub Logo](/images/earthquakes/california_earthquakes_heatmap_bw10.png)
+
+And a bandwidth of 100.0. 
+
+```python
+gs = GeoScatter(googleMapsApiKey, center, zoom = 5, imgSize = 600, mapLabels=False)
+gs.addPoints("../example_data/earthquake_locations.csv", s =5, alpha = 1.0, c = '#FFFF00', marker='s')
+gs.addHeatmap(colorscheme = "coolwarm", bw=100.0, alpha=.4)
+```
+![GitHub Logo](/images/earthquakes/california_earthquakes_heatmap_bw100.png)
+
 
 
 
