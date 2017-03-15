@@ -197,4 +197,7 @@ gs.showMap()
 
 ### License
 
+GNU GPLv3
+
+[here](License.txt)
 
