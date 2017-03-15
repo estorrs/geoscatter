@@ -3,7 +3,7 @@
 **A python API for adding points and heatmaps to a map.**
 
 ## Usage
-[Adding points](###Adding points)
+[create an anchor](#anchors-in-markdown)
 
 First import the GeoScatter and GeoPoint classes from geoscatter
 
@@ -26,7 +26,9 @@ center = GeoPoint(cLat, cLon)
 gs = GeoScatter(googleMapsApiKey, center, zoom=3, imgSize=600, mapLabels=False)
 ```
 
-(### Adding points)
+### Adding points
+
+(#some-markdown-heading)
 
 Before we add some points to our map, I'd like to take a moment to say the data I'll be using in these examples.  The datsets are the starting location of all US tornado tracks since 1950 (National Weather Service) and all *"significant"* global earthquakes since 2500 B.C. (USGS). 
 
