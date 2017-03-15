@@ -3,7 +3,12 @@
 **A python API for adding points and heatmaps to a map.**
 
 ## Usage
-[create an anchor](#adding-points)
+1. [Setup](#setup)
+1. [Adding Points](#adding-points)
+1. [Adding Heatmaps](#adding-heatmaps)
+1. [Adding Multiple Datasets](#adding-multiple-datasets)
+
+### Setup
 
 First import the GeoScatter and GeoPoint classes from geoscatter
 
@@ -26,7 +31,7 @@ center = GeoPoint(cLat, cLon)
 gs = GeoScatter(googleMapsApiKey, center, zoom=3, imgSize=600, mapLabels=False)
 ```
 
-### Adding points
+### Adding Points
 
 
 
