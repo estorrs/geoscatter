@@ -40,7 +40,7 @@ We can also change the point shape, size, color, and transparency.  Here we plot
 gs = GeoScatter(googleMapsApiKey, center, zoom=7, imgSize = 600, mapLabels=False)
 gs.addPoints("../example_data/tornado_locations.csv", s =10, alpha = 1.0, c = 'b', marker='v')
 ```
-![GitHub Logo](/images/tornadoes/missouri_Tornadoes_notransparency.png)
+![GitHub Logo](/images/tornadoes/missouri_tornadoes_notransparency.png)
 
 
 
