@@ -19,7 +19,7 @@
 
 You will need [pip](https://packaging.python.org/installing/) on your machine. 
 
-Then at the command line 
+At the command line 
 ```bash
 pip install geoscatter
 ```
