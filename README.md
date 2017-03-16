@@ -11,6 +11,7 @@
 	1. [Adding Points](#adding-points)
 	1. [Adding Heatmaps](#adding-heatmaps)
 	1. [Adding Multiple Datasets](#adding-multiple-datasets)
+1. [Documentation](#documentation)
 1. [License](#license)
 	
 ***
@@ -224,7 +225,13 @@ gs.showMap()
 
 ***
 
+### Documentation
+
+See [wiki](https://github.com/estorrs/geoscatter/wiki). 
+
+***
+
 ### License
 
-Available under the MIT license [here](License.txt)
+Available under the [MIT license](License.txt). 
 
