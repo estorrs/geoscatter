@@ -238,7 +238,7 @@ Available under the [MIT license](LICENSE.txt).
 
 ### Thanks
 
-Thanks to [Kevin Scannell](https://borel.slu.edu) and [Erin Chambers](https://cs.slu.edu/~chambers) for their help on this project.  
+Thanks to [Kevin Scannell](https://borel.slu.edu) and [Erin Chambers](http://cs.slu.edu/~chambers/) for their help on this project.  
 
 And of course the contributors to the APIs used in this project. 
 [matplotlib](https://matplotlib.org)
