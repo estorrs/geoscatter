@@ -119,6 +119,9 @@ class GeoScatter:
         elif isinstance(pts, file): 
             pts = self._getGeoPointsFromFile(pts)
         
+        '''
+        do the actual conversions
+        '''
         self._xCoordinates = []
         self._yCoordinates = []
         sizes = []
@@ -132,13 +135,16 @@ class GeoScatter:
                 self._xCoordinates.append(x)
                 self._yCoordinates.append(y)
                 sizes.append(gp.magnitude*s)
-               
+        
+        #plot the points on the fig  
         self._fig.scatter(self._xCoordinates, self._yCoordinates, s=sizes, alpha = alpha, c = c, edgecolors = edgecolors, marker=marker)
 
     '''
     adds a heatmap to the plot
     '''
     def addHeatmap(self, colorscheme = "coolwarm", alpha = .3, bw = 10.0):
+        
+        # get a 2d array cooresponding to locations of pixels on map.  Used later for kernel density model
         pts = []
         x = range(0, self._imageWidth, 1)
         y = range(0, self._imageHeight, 1)
@@ -151,6 +157,7 @@ class GeoScatter:
         if len(self._xCoordinates) == 0: 
             raise RuntimeError("map has no points")
         
+        #make 2d array to train model on.  
         TwoDArray = []
         for i in range(len(self._xCoordinates)): 
             TwoDArray.append([self._yCoordinates[i], self._xCoordinates[i]])
@@ -158,7 +165,7 @@ class GeoScatter:
         X = np.array(TwoDArray)
         
         '''
-        get probablilities for the heatmap
+        train model and get probablilities for the heatmap
         '''
         kde = KernelDensity(kernel='gaussian', bandwidth = bw).fit(X)
         log_probability = kde.score_samples(numpyPts)

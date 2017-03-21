@@ -1,6 +1,6 @@
 # geoscatter
 
-**A python API for adding points and heatmaps to a map.**
+**A python API for adding layers of points and heatmaps to a map.**
 
 ***
 
@@ -33,8 +33,6 @@ pip install geoscatter
 1. [Adding Multiple Datasets](#adding-multiple-datasets)
 
 
-**More in depth documentation [here](https://github.com/estorrs/geoscatter/wiki)**
-
 
 
 #### Setup
@@ -64,7 +62,7 @@ gs = GeoScatter(googleMapsApiKey, center, zoom=3, imgSize=600, mapLabels=False)
 
 
 
-Before we add some points to our map, I'd like to take a moment to talk about the data I'll be using in these examples.  The datsets are the starting location of all US tornado tracks since 1950 (National Weather Service) and all *"significant"* global earthquakes since 2500 B.C. (USGS). 
+Before we add some points to our map, I'd like to take a moment to talk about the data I'll be using in these examples.  The datasets are the starting location of all US tornado tracks since 1950 (National Weather Service) and all *"significant"* global earthquakes since 2500 B.C. (USGS). 
 
 There are multiple ways we can add points to our map.  First we can add points by file.  The file must have two fields.  This first field is the point latitude and the second is the longitude.  The fields can be separated by either a comma or tab.  So both latitude,longitude and latitude\tlongitude are acceptable. 
 
@@ -83,9 +81,9 @@ gs.showMap()
 ```
 ![missouri tornadoes](/images/tornadoes/missouri_tornadoes_notransparency.png)
 
-What if we wan't points in the same dataset to have different sizes?  We can do that.  
+What if we wan't points in the same dataset to have different sizes?  We can do that by using a file with three fields.
 
-Another way we can add points by file by using a file with three fields.  The first two fields are the points latitude and longitude.  The third field is the point size.  The fields can be separated by commas or tabs. 
+The first two fields are the points latitude and longitude.  The third field is the point size.  The fields can be separated by commas or tabs. 
 
 Here we plot the same tornadoes, but the size of the point corresponds to the number of deaths caused by the tornado.  
 ```python
@@ -233,5 +231,17 @@ See [wiki](https://github.com/estorrs/geoscatter/wiki).
 
 ### License
 
-Available under the [MIT license](License.txt). 
+Available under the [MIT license](LICENSE.txt). 
+
+### Thanks
+
+Thanks to [Kevin Scannell](borel.slu.edu) and [Erin Chambers](cs.slu.edu/~chambers) for their help on this project.  
+
+And of course the contributors to the APIs used in this project. 
+[matplotlib](https://matplotlib.org)
+[scipy](https://scipy.org)
+[mercantile](https://github.com/mapbox/mercantile)
+[sklearn](https://sk-learn.org)
+
+
 
