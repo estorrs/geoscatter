@@ -13,6 +13,7 @@
 	1. [Adding Multiple Datasets](#adding-multiple-datasets)
 1. [Documentation](#documentation)
 1. [License](#license)
+1. [Thanks](#thanks)
 	
 ***
 
@@ -232,6 +233,8 @@ See [wiki](https://github.com/estorrs/geoscatter/wiki).
 ### License
 
 Available under the [MIT license](LICENSE.txt). 
+
+***
 
 ### Thanks
 
